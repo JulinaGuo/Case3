@@ -235,7 +235,4 @@ plt.title('Gap between predicted volume and real volume')
 * R-square:  0.616
 * Prob (F-statistic): 0.00
 
-![](https://i.imgur.com/0jJUuCs.png)
-![](https://i.imgur.com/JH8tQja.png)
-![](https://i.imgur.com/6Y17x8K.png)
-![](https://i.imgur.com/MPV6GRU.png)
+
