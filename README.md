@@ -1,11 +1,13 @@
-# Case3
-Trade Volume Prediction
+# Case3: Trade Volume Prediction
 
-## Data Set
+### Overview
+The purpose of the project is to predict future stock trading volume. The predicted volume can later be usaed to arrange trading strategy such as pawn or vent.
+
+### Data Set
 * Time: 2020/10 - 2020/11
 * Variables: Price, Trade volume, Outstanding shares, Daily limit, Disposal of stock, Pawn
 
-## Data cleaning
+### Data cleaning
 ```
 import pandas as pd
 %matplotlib inline
@@ -101,7 +103,7 @@ del merge['前一日合計買賣超(張)']
 merge.dropna(axis=0, how='any', inplace=True)
 ```
 
-## Model building
+### Model building
 ```
 # 建立XY變數集
 X = pd.DataFrame()
@@ -158,7 +160,7 @@ model = sm.OLS(Y, X).fit()
 print(model.summary())
 ```
 
-## Validation
+### Validation
 ```
 # 匯入資料並將其整理為前面X,Y相同格式
 coef = np.array(model.params)
@@ -230,7 +232,7 @@ plt.title('Gap between predicted volume and real volume')
 ```
 ![](https://i.imgur.com/3CtfcmG.png)
 
-## Conclusions
+### Conclusions
 * Larger trade volume has better prediction
 * R-square:  0.616
 * Prob (F-statistic): 0.00
